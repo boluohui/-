@@ -41,7 +41,8 @@ class Dataset:
         #加载数据集到内存
         images, labels = load_dataset(self.path_name)        
         
-        train_images, valid_images, train_labels, valid_labels = train_test_split(images, labels, test_size = 0.3, random_state = random.randint(0, 100))        
+        train_images, valid_images, train_labels, valid_labels = 
+        train_test_split(images, labels, test_size = 0.3, random_state = random.randint(0, 100))        
         _, test_images, _, test_labels = train_test_split(images, labels, test_size = 0.5, random_state = random.randint(0, 100))                
         
         #当前的维度顺序如果为'th'，则输入图片数据时的顺序为：channels,rows,cols，否则:rows,cols,channels
